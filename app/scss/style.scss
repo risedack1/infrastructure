@@ -1,0 +1,29 @@
+@import "mixins";
+@import "fonts";
+@import "vars";
+@import "reset";
+@import "libs";
+@import "global";
+
+// components
+@import "components/tabs";
+@import "components/accordion";
+@import "components/buttons";
+@import "components/popup";
+@import "components/header";
+@import "components/links";
+@import "components/animation";
+
+// pages
+
+@import "index/main";
+
+.test {
+    font-family: "Circe", sans-serif;
+    font-weight: 300;
+
+    // @include adaptiv-value("padding", 100, 10, 1);
+    // @include adaptiv-value("font-size", 60, 16, 1);
+
+    background-color: #eee000;
+}

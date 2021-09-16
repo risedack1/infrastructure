@@ -1,0 +1,43 @@
+.button {
+    position: relative;
+    z-index: 10;
+    padding: 10px 26px;
+    border: 1px solid #e4b564;
+    font-family: "Circe", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #e4b564;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+
+    &__phone {
+        svg {
+            display: inline-block;
+            margin-right: 7px;
+            width: 12px;
+            height: 12px;
+            fill: #e4b564;
+            transform: translateY(1px);
+        }
+
+        @include w($sm) {
+            svg {
+                display: block;
+                margin-right: 0;
+            }
+        }
+    }
+
+    &:hover {
+        color: #000;
+        background-color: #e4b564;
+
+        svg {
+            fill: #000;
+        }
+    }
+
+    &:active {
+        background-color: #f5d399;
+    }
+}
