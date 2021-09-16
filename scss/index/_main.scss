@@ -1,5 +1,5 @@
 .top {
-    background-image: url("../../images/main-bg.jpg");
+    background-image: url("../images/main-bg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -572,7 +572,7 @@
 
 .footer {
     // padding: 150px 0 100px;
-    background-image: url("../images/footer-logo.svg"), url("../../images/footer-map.svg");
+    background-image: url("../images/footer-logo.svg"), url("../images/footer-map.svg");
     background-position: 0 50%, 100% 50%;
     background-size: auto, contain;
     background-repeat: no-repeat;
