@@ -1,0 +1,82 @@
+<footer class="footer @@full-page">
+    <div class="container">
+        <div class="footer__content animation-left">
+            <h2 class="footer__title title">Работаем по всей России</h2>
+            <div class="footer__contacts">
+                <div class="footer__subtitle">Офис в Санкт-Петербурге:</div>
+                <address class="footer__address-list">
+                    <a class="footer__address footer__address--phone" href="+78124382635">
+                        +7 (812) 438-26-35
+                    </a>
+                    <a class="footer__address footer__address--mail" href="mailto:info@skinfra.ru">
+                        info@skinfra.ru
+                    </a>
+                    <span class="footer__address footer__address--location">
+                        195197, Санкт-Петербург, Кондратьевский пр., д. 15, к. 2, л. З, офис 204 БЦ
+                        "Фернан Леже"
+                    </span>
+                </address>
+            </div>
+        </div>
+        <form class="footer__form contact-form animation-right" action="#" method="POST">
+            <fieldset class="contact-form__fieldset">
+                <legend class="contact-form__legend">Свяжитесь с нами</legend>
+                <span class="contact-form__text">
+                    Задайте вопрос, пришлите коммерческое предложение или пригласите на тендер
+                </span>
+                <div class="contact-form__inner">
+                    <label class="contact-form__label">
+                        <span class="contact-form__label-text"> Представьтесь, пожалуйста* </span>
+                        <input
+                            class="contact-form__input"
+                            type="text"
+                            name="name"
+                            data-validate-field="name"
+                            placeholder="Ваше имя"
+                            required
+                        />
+                    </label>
+                    <label class="contact-form__label">
+                        <span class="contact-form__label-text"> Ваш телефон </span>
+                        <input
+                            class="contact-form__input"
+                            type="tel"
+                            name="phone"
+                            data-validate-field="phone"
+                            placeholder="+7 (___) ___-__-__"
+                            required
+                        />
+                    </label>
+                    <label class="contact-form__label contact-form__label--file">
+                        Прикрепить файл
+                        <input
+                            class="contact-form__input contact-form__input--hidden visually-hidden"
+                            type="file"
+                            name="file"
+                            required
+                        />
+                    </label>
+                    <button class="contact-form__button button" type="submit">
+                        Перезвоните мне
+                    </button>
+                    <div class="contact-form__wrap-checkbox">
+                        <input
+                            class="contact-form__checkbox-hidden visually-hidden"
+                            id="contact-form-checkbox"
+                            type="checkbox"
+                            name="agreement"
+                            data-validate-field="checkbox"
+                            required
+                        />
+                        <label class="contact-form__checkbox" for="contact-form-checkbox">
+                            Я соглашаюсь
+                            <a class="contact-form__checkbox-document" href="#">
+                                с политикой конфиденциальности
+                            </a>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</footer>

@@ -17,13 +17,5 @@
 // pages
 
 @import "index/main";
-
-.test {
-    font-family: "Circe", sans-serif;
-    font-weight: 300;
-
-    // @include adaptiv-value("padding", 100, 10, 1);
-    // @include adaptiv-value("font-size", 60, 16, 1);
-
-    background-color: #eee000;
-}
+@import "contacts/contacts";
+@import "projects/projects";

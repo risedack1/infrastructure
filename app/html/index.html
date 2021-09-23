@@ -8,11 +8,12 @@
         <link rel="stylesheet" href="css/style.min.css" />
     </head>
 
-    <body>
+    <body class="main-page">
         @@include('./components/_header.html')
         <main class="main" id="fullpage">
             <section class="top full-page">
                 <div class="container">
+                    <h1 class="visually-hidden">Инфраструктура</h1>
                     <div class="top__inner">
                         <div class="top__content animation-left">
                             <a class="top__logo" href="#">
@@ -47,7 +48,7 @@
                             </div>
                         </div>
                         <div class="top__logobg animation-right">
-                            <img src="../images/top/top-logo.png" alt="логотип СК Инфраструктура" />
+                            <img src="images/top/top-logo.png" alt="логотип СК Инфраструктура" />
                         </div>
                     </div>
                 </div>
@@ -97,7 +98,7 @@
                                     <div class="benefits-slider__item swiper-slide">
                                         <a class="benefits-slider__link" href="#">
                                             <img
-                                                src="../images/sliders/benefits-slide-1.png"
+                                                src="images/sliders/benefits-slide-1.png"
                                                 alt="Колесные экскаваторы JCB"
                                             />
                                         </a>
@@ -105,7 +106,7 @@
                                     <div class="benefits-slider__item swiper-slide">
                                         <a class="benefits-slider__link" href="#">
                                             <img
-                                                src="../images/sliders/benefits-slide-1.png"
+                                                src="images/sliders/benefits-slide-1.png"
                                                 alt="Колесные экскаваторы JCB"
                                             />
                                         </a>
@@ -113,7 +114,7 @@
                                     <div class="benefits-slider__item swiper-slide">
                                         <a class="benefits-slider__link" href="#">
                                             <img
-                                                src="../images/sliders/benefits-slide-1.png"
+                                                src="images/sliders/benefits-slide-1.png"
                                                 alt="Колесные экскаваторы JCB"
                                             />
                                         </a>
@@ -154,7 +155,10 @@
                         <a class="projects__button button" href="#">Все проекты</a>
                     </div>
                     <ul class="projects__list animation-left">
-                        <li class="projects__item projects__item--1">
+                        <li
+                            class="projects__item"
+                            style="background-image: url('../images/project-bg-1.jpg')"
+                        >
                             <a class="projects__link" href="#">
                                 <div class="projects__inner">
                                     <img
@@ -176,7 +180,10 @@
                             </a>
                         </li>
 
-                        <li class="projects__item projects__item--2">
+                        <li
+                            class="projects__item"
+                            style="background-image: url('../images/project-bg-2.jpg')"
+                        >
                             <a class="projects__link" href="#">
                                 <div class="projects__inner">
                                     <img
@@ -198,7 +205,10 @@
                             </a>
                         </li>
 
-                        <li class="projects__item projects__item--3">
+                        <li
+                            class="projects__item"
+                            style="background-image: url('../images/project-bg-3.jpg')"
+                        >
                             <a class="projects__link" href="#">
                                 <div class="projects__inner">
                                     <img
@@ -220,7 +230,10 @@
                             </a>
                         </li>
 
-                        <li class="projects__item projects__item--4">
+                        <li
+                            class="projects__item"
+                            style="background-image: url('../images/project-bg-4.jpg')"
+                        >
                             <a class="projects__link" href="#">
                                 <div class="projects__inner">
                                     <img
@@ -242,7 +255,10 @@
                             </a>
                         </li>
 
-                        <li class="projects__item projects__item--5">
+                        <li
+                            class="projects__item"
+                            style="background-image: url('../images/project-bg-5.jpg')"
+                        >
                             <a class="projects__link" href="#">
                                 <div class="projects__inner">
                                     <img
@@ -264,7 +280,10 @@
                             </a>
                         </li>
 
-                        <li class="projects__item projects__item--6">
+                        <li
+                            class="projects__item"
+                            style="background-image: url('../images/project-bg-6.jpg')"
+                        >
                             <a class="projects__link" href="#">
                                 <div class="projects__inner">
                                     <img
@@ -288,114 +307,21 @@
                     </ul>
                 </div>
             </section>
-
-            <footer class="footer full-page">
-                <div class="container">
-                    <div class="footer__content animation-left">
-                        <h2 class="footer__title title">Работаем по всей России</h2>
-                        <div class="footer__contacts">
-                            <div class="footer__subtitle">Офис в Санкт-Петербурге:</div>
-                            <address class="footer__address-list">
-                                <a
-                                    class="footer__address footer__address--phone"
-                                    href="+78124382635"
-                                >
-                                    +7 (812) 438-26-35
-                                </a>
-                                <a
-                                    class="footer__address footer__address--mail"
-                                    href="mailto:info@skinfra.ru"
-                                >
-                                    info@skinfra.ru
-                                </a>
-                                <span class="footer__address footer__address--location">
-                                    195197, Санкт-Петербург, Кондратьевский пр., д. 15, к. 2, л. З,
-                                    офис 204 БЦ "Фернан Леже"
-                                </span>
-                            </address>
-                        </div>
-                    </div>
-                    <form
-                        class="footer__form contact-form animation-right"
-                        action="#"
-                        method="POST"
-                    >
-                        <fieldset class="contact-form__fieldset">
-                            <legend class="contact-form__legend">Свяжитесь с нами</legend>
-                            <span class="contact-form__text">
-                                Задайте вопрос, пришлите коммерческое предложение или пригласите на
-                                тендер
-                            </span>
-                            <div class="contact-form__inner">
-                                <label class="contact-form__label">
-                                    <span class="contact-form__label-text">
-                                        Представьтесь, пожалуйста*
-                                    </span>
-                                    <input
-                                        class="contact-form__input"
-                                        type="text"
-                                        name="name"
-                                        data-validate-field="name"
-                                        placeholder="Ваше имя"
-                                        required
-                                    />
-                                </label>
-                                <label class="contact-form__label">
-                                    <span class="contact-form__label-text"> Ваш телефон </span>
-                                    <input
-                                        class="contact-form__input"
-                                        type="tel"
-                                        name="phone"
-                                        data-validate-field="phone"
-                                        placeholder="+7 (___) ___-__-__"
-                                        required
-                                    />
-                                </label>
-                                <label class="contact-form__label contact-form__label--file">
-                                    Прикрепить файл
-                                    <input
-                                        class="
-                                            contact-form__input contact-form__input--hidden
-                                            visually-hidden
-                                        "
-                                        type="file"
-                                        name="file"
-                                        placeholder="Прикрепить файл"
-                                        aria-label="Прикрепить файл"
-                                        required
-                                    />
-                                </label>
-                                <button class="contact-form__button button" type="submit">
-                                    Перезвоните мне
-                                </button>
-                                <div class="contact-form__wrap-checkbox">
-                                    <input
-                                        class="contact-form__checkbox-hidden visually-hidden"
-                                        id="contact-form-checkbox"
-                                        type="checkbox"
-                                        name="agreement"
-                                        data-validate-field="checkbox"
-                                        required
-                                    />
-                                    <label
-                                        class="contact-form__checkbox"
-                                        for="contact-form-checkbox"
-                                    >
-                                        Я соглашаюсь
-                                        <a class="contact-form__checkbox-document" href="#">
-                                            с политикой конфиденциальности
-                                        </a>
-                                    </label>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
-                </div>
-            </footer>
-            @@include('./components/_footer.html')
+            @@include('./components/_footer.html', { "full-page": "full-page", })
         </main>
         @@include('./parts/_popup.html')
 
         <script src="js/main.min.js"></script>
+        <script>
+            new fullpage("#fullpage", {
+                sectionSelector: ".full-page",
+                navigation: true,
+                responsiveHeight: 900,
+                responsiveWidth: 1490,
+            });
+
+            //methods
+            fullpage_api.setAllowScrolling(true);
+        </script>
     </body>
 </html>

@@ -14,6 +14,16 @@ body {
     background-color: #e5e5e5;
 }
 
+.main-page {
+    .header-logo {
+        display: none;
+    }
+
+    .footer {
+        padding: 30px 0 0;
+    }
+}
+
 .main {
     flex-grow: 1;
 }
@@ -61,6 +71,40 @@ body {
 
     @include w($md) {
         font-size: 30px;
+    }
+}
+
+.breadcrumbs {
+    &__list {
+        display: flex;
+        align-items: center;
+        font-family: "Circe", sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+    }
+
+    &__item {
+        color: #606060;
+
+        &:not(:last-child)::after {
+            content: "/";
+            display: inline-block;
+            margin: 0 10px;
+        }
+    }
+
+    &__link {
+        color: #606060;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #a1a1a1;
+        }
+
+        &--active {
+            padding-bottom: 3px;
+            text-decoration: underline;
+        }
     }
 }
 
