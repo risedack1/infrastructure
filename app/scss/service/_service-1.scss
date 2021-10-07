@@ -503,7 +503,7 @@
             top: 50%;
             width: 50px;
             height: 50px;
-            background-image: url("../../images/icons/arrow-big.svg");
+            background-image: url("../images/icons/arrow-big.svg");
             transform: translateY(-50%) rotate(90deg);
         }
 
@@ -557,7 +557,7 @@
         }
 
         &--works::before {
-            background-image: url("../../images/service-1/responsibilities-6.svg");
+            background-image: url("../images/service-1/responsibilities-6.svg");
         }
 
         @include w($md) {
@@ -585,7 +585,7 @@
             top: 50%;
             width: 50px;
             height: 50px;
-            background-image: url("../../images/icons/arrow-big.svg");
+            background-image: url("../images/icons/arrow-big.svg");
             transform: translateY(-50%);
         }
     }
@@ -599,7 +599,7 @@
             top: 50%;
             width: 50px;
             height: 50px;
-            background-image: url("../../images/icons/arrow-big.svg");
+            background-image: url("../images/icons/arrow-big.svg");
             transform: translateY(-50%) rotate(180deg);
         }
     }
@@ -959,15 +959,15 @@
         }
 
         &--1::before {
-            background-image: url("../../images/service-1/norms-1.svg");
+            background-image: url("../images/service-1/norms-1.svg");
         }
 
         &--2::before {
-            background-image: url("../../images/service-1/norms-2.svg");
+            background-image: url("../images/service-1/norms-2.svg");
         }
 
         &--3::before {
-            background-image: url("../../images/service-1/norms-3.svg");
+            background-image: url("../images/service-1/norms-3.svg");
         }
     }
 
