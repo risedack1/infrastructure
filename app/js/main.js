@@ -93,7 +93,8 @@ function body_lock_add(delay) {
             const el = lock_padding[index];
             el.style.paddingRight = window.innerWidth - document.querySelector('main').offsetWidth + 'px';
         }
-        body.style.paddingRight = window.innerWidth - document.querySelector('main').offsetWidth + 'px';
+        body.style.paddingRight = 0;
+        // body.style.paddingRight = window.innerWidth - document.querySelector('main').offsetWidth + 'px';
         body.classList.add("_lock");
 
         unlock = false;
@@ -184,12 +185,12 @@ document.addEventListener('keydown', function (e) {
 });
 
 $(function () {
+    $('.vacancies__conditions').on('click', function () {
+        $(this).toggleClass('active')
+    });
+
     $('.burger').on('click', function () {
         $('.menu').toggleClass('menu--active')
-    })
-
-    $(window).scroll(function () {
-        $('.menu').removeClass('menu--active')
     });
 
     $(document).mouseup(function (e) { // событие клика по веб-документу

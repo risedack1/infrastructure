@@ -82,6 +82,8 @@ function scripts() {
             'node_modules/swiper/swiper-bundle.js',
             'node_modules/fullpage.js/vendors/scrolloverflow.js',
             'node_modules/fullpage.js/dist/fullpage.js',
+            'node_modules/nouislider/dist/nouislider.js',
+            'node_modules/aos/dist/aos.js',
             'app/js/libs.js',
             'app/js/main.js'
         ])

@@ -121,9 +121,9 @@
     top: 0;
     padding: 60px 15px;
     width: 50vw;
-    height: 100vh;
+    min-height: calc(100vh + 80px);
     background-color: #151515;
-    transform: translateX(-300%);
+    transform: translateX(-110%);
     transition: transform 0.5s ease-in-out;
 
     &__list {
@@ -142,8 +142,9 @@
         @include w($sm) {
             left: 0;
             right: 0;
-            top: auto;
-            padding-top: 50px;
+            top: 0;
+            bottom: 0;
+            padding-top: 80px;
             padding-left: 0;
             height: 100%;
             overflow-y: auto;

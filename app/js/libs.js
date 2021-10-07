@@ -1,15 +1,11 @@
 let inputPhone = document.querySelectorAll('input[type="tel"]');
 let popupForm = document.querySelectorAll('.popup__form')
 
-// new fullpage('#fullpage', {
-//     sectionSelector: '.full-page',
-//     navigation: true,
-//     responsiveHeight: 900,
-//     responsiveWidth: 1490,
-// });
+// -----------------------------------------------------------------
 
-// //methods
-// fullpage_api.setAllowScrolling(true);
+AOS.init({
+    duration: 1000,
+});
 
 // -----------------------------------------------------------------
 
