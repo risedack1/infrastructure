@@ -397,13 +397,7 @@
 }
 
 .projects {
-    background-color: #0e0e0e;
-
-    // &__container {
-    //     display: flex;
-    //     flex-direction: column;
-    //     height: 100%;
-    // }
+    background-color: #171717;
 
     &__top {
         display: flex;
@@ -450,33 +444,10 @@
         @include adaptiv-value("height", 360, 257, 1);
 
         width: 100%;
+        overflow: hidden;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-
-        &--1 {
-            background-image: url("../images/project-bg-1.jpg");
-        }
-
-        &--2 {
-            background-image: url("../images/project-bg-2.jpg");
-        }
-
-        &--3 {
-            background-image: url("../images/project-bg-3.jpg");
-        }
-
-        &--4 {
-            background-image: url("../images/project-bg-4.jpg");
-        }
-
-        &--5 {
-            background-image: url("../images/project-bg-5.jpg");
-        }
-
-        &--6 {
-            background-image: url("../images/project-bg-6.jpg");
-        }
 
         @include w($sm) {
             padding-top: 60px;
@@ -570,8 +541,12 @@
     }
 }
 
+.footer.full-page {
+    padding: 10px 0 80px;
+}
+
 .footer {
-    // padding: 150px 0 100px;
+    padding: 100px 0 80px;
     background-image: url("../images/footer-logo.svg"), url("../images/footer-map.svg");
     background-position: 0 50%, 100% 50%;
     background-size: auto, contain;

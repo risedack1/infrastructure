@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Инфраструктура</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+    @@include('./components/_header.html')
+    <main class="main">
+        <section class="company">
+            <div class="container">
+                <div class="company__breadcrumbs breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Компания</a>
+                        </li>
+                    </ul>
+                </div>
+                <h2 class="company__title title">
+                    Компания
+                </h2>
+                <p class="company__subtitle subtitle">
+                    Строительная компания "Инфраструктура" осуществляет полный перечень работ в области благоустройства
+                    территории:
+                </p>
+            </div>
+        </section>
+    </main>
+    @@include('./components/_footer.html') @@include('./parts/_popup.html')
+
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

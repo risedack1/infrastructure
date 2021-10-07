@@ -191,6 +191,23 @@
         @extend %click;
     }
 
+    &.popup-project {
+        font-size: 20px;
+
+        .popup__title {
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .popup__subtitle {
+            font-weight: 400;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
     &.show {
         visibility: visible;
         overflow: auto;
