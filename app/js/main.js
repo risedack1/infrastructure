@@ -58,7 +58,7 @@ let unlock = true;
 // //BodyLock
 function body_lock(delay) {
     let body = document.querySelector("body");
-    if (body.classList.contains('_lock')) {
+    if (body.classList.contains('lock')) {
         body_lock_remove(delay);
     } else {
         body_lock_add(delay);
@@ -75,7 +75,7 @@ function body_lock_remove(delay) {
                 el.style.paddingRight = '0px';
             }
             body.style.paddingRight = '0px';
-            body.classList.remove("_lock");
+            body.classList.remove("lock");
         }, delay);
 
         unlock = false;
@@ -95,7 +95,7 @@ function body_lock_add(delay) {
         }
         body.style.paddingRight = 0;
         // body.style.paddingRight = window.innerWidth - document.querySelector('main').offsetWidth + 'px';
-        body.classList.add("_lock");
+        body.classList.add("lock");
 
         unlock = false;
         setTimeout(function () {
@@ -184,6 +184,7 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
+
 $(function () {
     $('.vacancies__conditions').on('click', function () {
         $(this).toggleClass('active')
@@ -191,6 +192,21 @@ $(function () {
 
     $('.burger').on('click', function () {
         $('.menu').toggleClass('menu--active')
+        $('body').addClass('lock')
+    });
+
+    $(window).bind('mousewheel', function () {
+        const sectionActive = document.querySelector('.full-page.active');
+        const animationBlocksAll = document.querySelectorAll('.animation');
+        const animationBlocks = sectionActive.querySelectorAll('.animation');
+
+        animationBlocksAll.forEach(el => {
+            el.classList.remove('active');
+        });
+
+        animationBlocks.forEach(el => {
+            if (!el.classList.contains('active')) el.classList.add('active');
+        });
     });
 
     $(document).mouseup(function (e) { // событие клика по веб-документу
@@ -200,12 +216,14 @@ $(function () {
             div.has(e.target).length === 0 &&
             div.has(e.target).siblings()
         ) { // и не по его дочерним элементам
-            div.removeClass('menu--active'); // скрываем его
+            div.removeClass('menu--active') // скрываем его
+            $('body').removeClass('lock')
         }
     });
 
     $('.menu__close').on('click', function () {
         $('.menu').toggleClass('menu--active')
+        $('body').removeClass('lock')
     })
 
     $(window).scroll(function () {

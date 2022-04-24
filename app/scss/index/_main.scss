@@ -576,7 +576,6 @@
     }
 
     &__contacts {
-
     }
 
     // .footer__subtitle
@@ -815,6 +814,8 @@
 }
 
 #fp-nav {
+    pointer-events: none;
+
     ul li a span {
         background-color: #fff;
     }

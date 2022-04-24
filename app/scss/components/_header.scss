@@ -197,6 +197,10 @@
         transform: translateX(0);
     }
 
+    @include w($sm) {
+        min-height: calc(120vh + 80px);
+    }
+
     @include w($md) {
         width: 70vw;
     }

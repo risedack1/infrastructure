@@ -1,10 +1,11 @@
 let inputPhone = document.querySelectorAll('input[type="tel"]');
-let popupForm = document.querySelectorAll('.popup__form')
+let popupForm = document.querySelectorAll('.popup__form');
 
 // -----------------------------------------------------------------
 
 AOS.init({
     duration: 1000,
+    once: true
 });
 
 // -----------------------------------------------------------------
@@ -52,6 +53,8 @@ validateForms('.contact-form', {
 const swiper = new Swiper('.swiper-container', {
     loop: true,
     slidesPerView: 1,
+    autoplay: true,
+    speed: 1000,
 
     pagination: {
         el: '.swiper-pagination',
