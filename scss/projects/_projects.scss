@@ -1,0 +1,88 @@
+.projects-page {
+    padding: 154px 0 153px;
+    background-color: #171717;
+
+    &__breadcrumbs {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        margin-bottom: 85px;
+
+        @include w($md) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @include w($md) {
+        padding: 100px 0 80px;
+    }
+}
+
+.projects__item--build,
+.projects__item--finish {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        right: 26px;
+        top: 29px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        font-size: 0;
+        background-color: #e4b564;
+        transition: width 0.3s, border-radius 0.3s, font-size 0.3s;
+    }
+
+    &:hover::before {
+        content: "Стройка";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        border-radius: 22px;
+        font-size: 14px;
+    }
+}
+
+@media (any-hover: none) {
+    .projects__item--build,
+    .projects__item--finish {
+        position: relative;
+
+        &::before {
+            content: "Стройка";
+            position: absolute;
+            right: 16px;
+            top: 19px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 22px;
+            border-radius: 22px;
+            font-size: 14px;
+            background-color: #e4b564;
+            transition: width 0.3s, border-radius 0.3s, font-size 0.3s;
+        }
+    }
+
+    .projects__item--finish {
+        &::before {
+            content: "Завершено";
+            background-color: #69ce6d;
+        }
+    }
+}
+
+.projects__item--finish {
+    &::before {
+        background-color: #69ce6d;
+    }
+
+    &:hover::before {
+        content: "Завершено";
+    }
+}

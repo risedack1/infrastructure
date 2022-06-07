@@ -1,0 +1,237 @@
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    visibility: hidden;
+    padding: 30px 10px;
+    width: 100%;
+    height: 100%;
+    transition: visibility 0.8s ease 0s;
+    -webkit-overflow-scrolling: touch;
+
+    &::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        transition: opacity 0.8s ease 0s;
+    }
+
+    // .popup__content
+    &__content {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 100%;
+    }
+
+    // .popup__body
+    &__body {
+        padding: 82px 105px 90px;
+        width: 100%;
+        max-width: 617px;
+        background-color: #000;
+        transform: scale(0);
+        transition: all 0.3s ease 0s;
+
+        @include w($md) {
+            padding: 62px 75px 70px;
+        }
+
+        @include w($sm) {
+            padding: 52px 20px 30px;
+        }
+    }
+
+    &__form {
+        width: 100%;
+    }
+
+    &__fieldset {
+        margin: 0;
+        margin-bottom: 28px;
+        padding: 0;
+        border: none;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    &__label-text {
+        display: block;
+        margin-bottom: 14px;
+    }
+
+    &__input {
+        padding: 20px 25px;
+        width: 100%;
+        border: none;
+        color: #fff;
+        background-color: #151515;
+
+        &::placeholder {
+            font-size: 14px;
+            color: #fff;
+        }
+
+        @include w($xsm) {
+            padding: 15px;
+        }
+    }
+
+    &__input.js-validate-error-field {
+        &::placeholder {
+            color: #fb6363;
+        }
+    }
+
+    &__checkbox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 45px;
+        height: 29px;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 29px;
+            height: 29px;
+            border: 1px solid #e4b564;
+        }
+
+        @include w($sm) {
+            flex-direction: column;
+            padding-left: 0;
+        }
+
+        @include w($xsm) {
+            line-height: 1.5;
+        }
+    }
+
+    &__document {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 52.5%;
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+        }
+
+        @include w($sm) {
+            display: block;
+        }
+    }
+
+    &__checkbox-hidden:checked + .popup__checkbox {
+        &::before {
+            background-image: url("../images/icons/agree.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #e4b564;
+        }
+    }
+
+    &__button {
+        padding: 20px 10px;
+        width: 100%;
+        font-family: "Gilam", sans-serif;
+        font-weight: 600;
+    }
+
+    // .popup__close
+    &__close {
+        position: absolute;
+        right: 28px;
+        top: 32px;
+        z-index: 30;
+        width: 26px;
+        height: 1px;
+        background-color: #e4b564;
+        transform: rotate(45deg);
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 1px;
+            height: 26px;
+            background-color: inherit;
+            transform: translate(-50%, -50%);
+        }
+
+        @extend %click;
+    }
+
+    &.popup-project {
+        font-size: 20px;
+
+        .popup__title {
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .popup__subtitle {
+            font-weight: 400;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &.show {
+        visibility: visible;
+        overflow: auto;
+
+        &::before {
+            opacity: 1;
+        }
+
+        .popup__body {
+            transform: scale(1);
+        }
+    }
+
+    &._active {
+        visibility: visible;
+        overflow: auto;
+
+        &::before {
+            opacity: 1;
+        }
+
+        .popup__body {
+            transform: scale(1);
+            transition: all 0.3s ease 0.2s;
+        }
+    }
+}
